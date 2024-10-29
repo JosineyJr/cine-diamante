@@ -1,0 +1,131 @@
+/* Importação da fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Reset básico de CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ajustes para garantir que o rodapé fique no final da página */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(to right, #2980b9, #6dd5fa);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header .logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.logo.blend {
+  mix-blend-mode: multiply;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+main {
+  flex: 1;
+  /* Permite que o main cresça e ocupe o espaço disponível */
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #2980b9;
+}
+
+/* Configuração do Grid 2x2 */
+.org-chart-horizontal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Define 2 colunas de largura igual */
+  grid-template-rows: repeat(2, auto);
+  /* Define 2 linhas automáticas */
+  gap: 20px;
+}
+
+.position {
+  border: 2px solid #2980b9;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Centraliza o conteúdo verticalmente */
+  align-items: center;
+  /* Centraliza o conteúdo horizontalmente */
+  text-align: center;
+}
+
+.position:hover {
+  background-color: #2980b9;
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.position p {
+  margin: 5px 0;
+}
+
+.position strong {
+  font-weight: 600;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: #bdc3c7;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .org-chart-horizontal {
+    grid-template-columns: 1fr;
+    /* Em telas menores, as divs ocupam a largura total */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  main h2 {
+    font-size: 1.5em;
+  }
+}
